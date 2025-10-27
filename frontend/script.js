@@ -3,40 +3,46 @@ const url = 'http://127.0.0.1:8000/recommend'
 const btn = document.getElementById('s1')
 const resp = document.getElementById('resp')
 
-btn.addEventListener('click', handleSubmit)
-
-async function handleSubmit(event) {
-    event.preventDefault() // prevent page reload
-
-    // Grab the values
-    const name = document.getElementById('name').value
-    const email = document.getElementById('email').value
-
-    await sendData(name, email)
+// Function to collect user input
+function getBrandInput() {
+  return {
+    brand_name: document.getElementById('brand_name').value,
+    campaign_name: document.getElementById('campaign_name').value,
+    description: document.getElementById('description').value,
+    target_region: document.getElementById('target_region').value,
+    target_age_group: document.getElementById('target_age_group').value,
+    target_gender: document.getElementById('target_gender').value,
+    keywords: document.getElementById('keywords').value
+      .split(',')
+      .map(k => k.trim())
+      .filter(k => k.length > 0)  // Only keep non-empty strings
+  };
 }
 
+btn.addEventListener('click', handleSubmit);
 
-async function sendData(name, email) {  
+async function handleSubmit(event) {
+  event.preventDefault()
+  const brandInput = getBrandInput()
+  await sendData(brandInput)
+}
 
-    // Payload schema
-    // TODO: Implement a proper schema
-    const payload = {
-        name: name,
-        email: email,
-    }
-
-    // HTTP Request Responce
+async function sendData(payload) {
+  try {
     const res = await fetch(url, {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     })
 
-    const data = await res.json()
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`)
 
-    // Set the responce para
-    resp.textContent = data['processed-data']['name']
-    console.log('Server Replied:', data)
+    const data = await res.json()
+    console.log('Server replied:', data)
+
+    // Display the response (edit as per your API response)
+    resp.textContent = JSON.stringify(data, null, 2)
+  } catch (err) {
+    console.error('Request failed:', err)
+  }
 }

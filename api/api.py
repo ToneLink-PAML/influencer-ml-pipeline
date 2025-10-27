@@ -9,9 +9,8 @@ router = APIRouter()
 # We process the data and send it back.
 @router.post('/recommend')
 def recommend_influencer(payload: Payload):
-    print([payload])
-    payload.name += 'From FAPI'
-    return {'processed-data': payload}
+    print(payload)
+    return payload
 
 # This is called when a user/browser trys to fetch data.
 @router.get('/influencer/{id}')

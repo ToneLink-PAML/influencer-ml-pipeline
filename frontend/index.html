@@ -6,24 +6,66 @@
     </head> 
 
     <body>
-        <form>
-            <h3 class="heading">INFORMATION</h3>
+        <div class="container">
+            <div class="forms">
+                <form class="form-card" id="infoForm">
+                    <h3 class="heading">BRAND INFORMATION.</h3>
+                
+                    <input type="text" id="brand_name" name="brand_name" placeholder="Enter your brand name">
+                    <input type="text" id="campaign_name" name="campaign_name" placeholder="Enter your campaign name">
 
-            <!-- <label for="name">Name</label> -->
-            <input type="text" id="name" name="name" placeholder="Enter your name">
-            
-            <!-- <label for="email">Email</label> -->
-            <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <textarea id="description" name="description" placeholder="Enter the description" ></textarea>
+
+                    <div class="selects">
+                        <label for="target_region">Target Region: </label>
+                        <select id="target_region">
+                            <option value="">Select region</option>
+                            <option value="namerica">North America</option>
+                            <option value="europe">Europe</option>
+                            <option value="asia">Asia</option>
+                            <option value="samerica">South America</option>
+                            <option value="africa">Africa</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+
+                    <div class="selects">
+                        <label for="target_age_group">Target Age Group: </label>
+                        <select id="target_age_group">
+                            <option value="">Select age group</option>
+                            <option value="13-18">13-18</option>
+                            <option value="19-25">19-25</option>
+                            <option value="26-35">26-35</option>
+                            <option value="36-50">36-50</option>
+                            <option value="50+">50+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="selects">
+                        <label for="target_gender">Target Gender: </label>
+                        <select id="target_gender">
+                            <option value="">Select gender</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                            <option value="a">All</option>
+                        </select>
+                    </div>
 
 
-            <button type="submit" id="s1">Submit</button>
-            <!-- <button type="reset" id="r1">Reset</button> -->
-        </form>
+                    <input type="text" id="keywords" name="keywords" placeholder="Enter the keywords [comma seperated]">
 
-        <form>
-            <h3 class="heading">RESPONCE</h3>
-            <p id="resp">No Info</p>
-        </form>
+                    <button type="submit" id="s1">Submit</button>
+                </form>
+                
+                <div class="response-card" id="responseCard">
+                    <h3 class="heading">RESPONCE.</h3>
+                    <p id="resp">> No Info</p>
+                </div>
+                <div class="response-card">
+                    <h1 class="heading">TONE LINK.</h1>
+                </div>
+            </div>
+        </div>
 
         <script src="script.js"></script>
     </body>
