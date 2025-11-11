@@ -1,6 +1,6 @@
 body {
     font-family: monospace;
-    background-color: #b0b0b0;
+    background-color: #FFF8F0;
     min-height: 90vh;
     display: flex;
     justify-content: center;
@@ -30,57 +30,75 @@ body {
 
 .form-card,
 .response-card {
-    background-color: whitesmoke;
+    background-color: #FFFCF9;
     border-radius: 6px;
     padding: 16px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1.5px 1.5px 0px #FF69B4;
     min-width: 260px;
     flex: 1 1 320px;
+    border-color: #ffb6d3;
+    border-width: 1px;
+    border-style: solid;
     /* flexible width, stays readable */
     box-sizing: border-box;
 }
 
+.spacer {
+    margin: 20px;
+}
 
-input, textarea {
+input,
+textarea {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    margin-top: 4px;
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     box-sizing: border-box;
-    border-radius: 8px;
-    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+    border: 1px solid #c3c3c3;
     resize: vertical;
 }
 
-label{
+label {
     padding: 8px 4px;
+    font-family: "Jersey 10", sans-serif;
+    /* font-size: 0.85em; */
+    font-weight: 100;
+    color: #FF69B4;
+    letter-spacing: 1px;
 }
 
-.selects{
+.selects {
     display: flex;
     margin-bottom: 8px;
     width: 100%;
     justify-content: space-between;
 }
-select{
-    padding: 4px 8px;
-    border: 1px solid #b0b0b0;
-    border-radius: 8px;
-    border: 1px solid #b0b0b0;
+
+select {
+    padding: 8px 8px;
+    border: 1px solid #c3c3c3;
+    border-radius: 4px;
+    border: 1px solid #c3c3c3;
 }
 
 button {
-    background-color: greenyellow;
-    border-radius: 8px;
-    border: 2px solid green;
-    padding: 4px 12px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 100;
+    font-size: large;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #FFE58F 0%, #FFB4B4 100%);
+    border-radius: 4px;
+    border-style: none;
+    padding: 12px;
     box-sizing: border-box;
+    width: 100%;
     cursor: pointer;
+    transition: transform 0.2s ease;
+
 }
 
-input,
-textarea,
-button,
-select {
-    font-family: monospace;
+button:hover {
+    transform: translateY(-2px);
 }

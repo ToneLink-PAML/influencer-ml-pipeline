@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Brand Page</title>
-        <link rel="stylesheet" href="style.css">
-    </head> 
 
-    <body>
-        <div class="container">
-            <div class="forms">
-                <form class="form-card" id="infoForm">
-                    <h3 class="heading">BRAND INFORMATION.</h3>
-                
-                    <input type="text" id="brand_name" name="brand_name" placeholder="Enter your brand name">
-                    <input type="text" id="campaign_name" name="campaign_name" placeholder="Enter your campaign name">
+<head>
+    <title>Brand Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-                    <textarea id="description" name="description" placeholder="Enter the description" ></textarea>
+<body>
+    <div class="container">
+        <div class="forms">
+            <form class="form-card" id="infoForm">
+                <h3 class="heading">BRAND INFORMATION.</h3>
 
-                    <div class="selects">
-                        <label for="target_region">Target Region: </label>
-                        <select id="target_region">
-                            <option value="">Select region</option>
-                            <option value="namerica">North America</option>
-                            <option value="europe">Europe</option>
-                            <option value="asia">Asia</option>
-                            <option value="samerica">South America</option>
-                            <option value="africa">Africa</option>
-                            <option value="oceania">Oceania</option>
-                        </select>
-                    </div>
+                <label for="brand_name">BRAND NAME</label>
+                <input type="text" id="brand_name" name="brand_name" placeholder="Enter your brand name">
 
-                    <div class="selects">
-                        <label for="target_age_group">Target Age Group: </label>
-                        <select id="target_age_group">
-                            <option value="">Select age group</option>
-                            <option value="13-18">13-18</option>
-                            <option value="19-25">19-25</option>
-                            <option value="26-35">26-35</option>
-                            <option value="36-50">36-50</option>
-                            <option value="50+">50+</option>
-                        </select>
-                    </div>
-                    
-                    <div class="selects">
-                        <label for="target_gender">Target Gender: </label>
-                        <select id="target_gender">
-                            <option value="">Select gender</option>
-                            <option value="m">Male</option>
-                            <option value="f">Female</option>
-                            <option value="a">All</option>
-                        </select>
-                    </div>
+                <label for="brand_name">CAMPAIGN NAME</label>
+                <input type="text" id="campaign_name" name="campaign_name" placeholder="Enter your campaign name">
 
+                <label for="brand_name">CAMPAIGN DESCRIPTION</label>
+                <textarea id="description" name="description" placeholder="Enter the description"></textarea>
 
-                    <input type="text" id="keywords" name="keywords" placeholder="Enter the keywords [comma seperated]">
-
-                    <button type="submit" id="s1">Submit</button>
-                </form>
-                
-                <div class="response-card" id="responseCard">
-                    <h3 class="heading">RESPONCE.</h3>
-                    <p id="resp">> No Info</p>
+                <div class="selects">
+                    <label for="target_region">TARGET REGION: </label>
+                    <select id="target_region">
+                        <option value="">Select region</option>
+                        <option value="namerica">North America</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="samerica">South America</option>
+                        <option value="africa">Africa</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
                 </div>
-                <div class="response-card">
-                    <h1 class="heading">TONE LINK.</h1>
+
+                <div class="selects">
+                    <label for="target_age_group">TARGET AGE GROUP: </label>
+                    <select id="target_age_group">
+                        <option value="">Select age group</option>
+                        <option value="13-18">13-18</option>
+                        <option value="19-25">19-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-50">36-50</option>
+                        <option value="50+">50+</option>
+                    </select>
                 </div>
+
+                <div class="selects">
+                    <label for="target_gender">TARGET GENDER: </label>
+                    <select id="target_gender">
+                        <option value="">Select gender</option>
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
+                        <option value="a">All</option>
+                    </select>
+                </div>
+
+                <div class="spacer"></div>
+
+                <label for="brand_name">KEYWORDS</label>
+                <input type="text" id="keywords" name="keywords" placeholder="Enter the keywords [comma seperated]">
+
+                <button type="submit" id="s1">FIND MY MATCH</button>
+            </form>
+
+            <div class="response-card" id="responseCard">
+                <h3 class="heading">RESPONSE.</h3>
+                <p id="resp">> No Info</p>
+            </div>
+            <div class="response-card">
+                <h1 class="heading">TONE LINK.</h1>
             </div>
         </div>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
+
 </html>
