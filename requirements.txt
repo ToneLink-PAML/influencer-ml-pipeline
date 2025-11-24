@@ -1,2 +1,12 @@
-fastapi
-uvicorn
+fastapi==0.121.3
+uvicorn==0.38.0
+pydantic==2.12.4
+torch==2.9.1
+transformers==4.57.1
+sentence-transformers==5.1.2
+numpy==2.3.5
+pandas==2.3.3
+scikit-learn==1.7.2
+joblib==1.5.2
+matplotlib==3.10.7
+tqdm==4.67.1

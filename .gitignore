@@ -1,1 +1,7 @@
 __pycache__
+
+embeddings/*
+
+models/*
+
+top_influnencer_recommendations.csv

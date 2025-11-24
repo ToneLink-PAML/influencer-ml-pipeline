@@ -1,83 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Brand Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand-Influencer Matchmaker</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="container">
-        <div class="forms">
-            <form class="form-card" id="infoForm">
-                <h3 class="heading">BRAND INFORMATION.</h3>
+<body class="min-h-screen p-4 sm:p-8">
 
-                <label for="brand_name">BRAND NAME</label>
-                <input type="text" id="brand_name" name="brand_name" placeholder="Enter your brand name">
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-white mb-3 tracking-tight">Tone Link</h1>
+            <p class="text-xl text-white font-light">Elevate your outreach: Discover, Match, and Connect with the
+                perfect creators.</p>
+        </header>
 
-                <label for="brand_name">CAMPAIGN NAME</label>
-                <input type="text" id="campaign_name" name="campaign_name" placeholder="Enter your campaign name">
 
-                <label for="brand_name">CAMPAIGN DESCRIPTION</label>
-                <textarea id="description" name="description" placeholder="Enter the description"></textarea>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-                <div class="selects">
-                    <label for="target_region">TARGET REGION: </label>
-                    <select id="target_region">
-                        <option value="">Select region</option>
-                        <option value="namerica">North America</option>
-                        <option value="europe">Europe</option>
-                        <option value="asia">Asia</option>
-                        <option value="samerica">South America</option>
-                        <option value="africa">Africa</option>
-                        <option value="oceania">Oceania</option>
-                    </select>
-                </div>
 
-                <div class="selects">
-                    <label for="target_age_group">TARGET AGE GROUP: </label>
-                    <select id="target_age_group">
-                        <option value="">Select age group</option>
-                        <option value="13-18">13-18</option>
-                        <option value="19-25">19-25</option>
-                        <option value="26-35">26-35</option>
-                        <option value="36-50">36-50</option>
-                        <option value="50+">50+</option>
-                    </select>
-                </div>
+            <div class="lg:col-span-1 content-block p-8 rounded-2xl h-fit sticky top-8">
+                <h2 class="text-3xl font-extrabold text-black mb-6 border-b-2 border-border-dark pb-4">Your Brand
+                    Profile</h2>
+                <form id="brand-form" class="space-y-6">
 
-                <div class="selects">
-                    <label for="target_gender">TARGET GENDER: </label>
-                    <select id="target_gender">
-                        <option value="">Select gender</option>
-                        <option value="m">Male</option>
-                        <option value="f">Female</option>
-                        <option value="a">All</option>
-                    </select>
-                </div>
+                    <!-- Existing Inputs -->
 
-                <div class="spacer"></div>
+                    <div>
+                        <label for="brandName" class="block text-sm font-medium text-black mb-1">Brand Name</label>
+                        <input type="text" id="brandName" name="brandName" required value="GlowUp Cosmetics"
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 text-black">
+                    </div>
 
-                <label for="brand_name">KEYWORDS</label>
-                <input type="text" id="keywords" name="keywords" placeholder="Enter the keywords [comma seperated]">
 
-                <button type="submit" id="s1">FIND MY MATCH</button>
-            </form>
+                    <div>
+                        <label for="industry" class="block text-sm font-medium text-black mb-1">Industry /
+                            Vertical</label>
+                        <select id="industry" name="industry" required
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 bg-white text-black">
+                            <option value="fashion">Fashion & Apparel</option>
+                            <option value="beauty" selected>Beauty & Cosmetics</option>
+                            <option value="tech">Tech & Gadgets</option>
+                            <option value="food">Food & Beverage</option>
+                            <option value="travel">Travel & Lifestyle</option>
+                            <option value="fitness">Health & Fitness</option>
+                            <option value="gaming">Gaming</option>
+                        </select>
+                    </div>
 
-            <div class="response-card" id="responseCard">
-                <h3 class="heading">RESPONSE.</h3>
-                <p id="resp">> No Info</p>
+
+                    <!-- New Inputs -->
+
+                    <div>
+                        <label for="audience" class="block text-sm font-medium text-black mb-1">Target Audience (Age
+                            Range)</label>
+                        <select id="audience" name="audience" required
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 bg-white text-black">
+                            <option value="18-25">18-25 (Gen Z)</option>
+                            <option value="26-35">26-35 (Young Millennials)</option>
+                            <option value="36-50">36-50 (Older Millennials/Gen X)</option>
+                            <option value="50+">50+ (Boomers)</option>
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="gender" class="block text-sm font-medium text-black mb-1">Target Gender</label>
+                        <select id="gender" name="gender" required
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 bg-white text-black">
+                            <option value="female" selected>Female</option>
+                            <option value="male">Male</option>
+                            <option value="unisex">Unisex / All</option>
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="region" class="block text-sm font-medium text-black mb-1">Target Region</label>
+                        <select id="region" name="region" required
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 bg-white text-black">
+                            <option value="NA" selected>North America (NA)</option>
+                            <option value="EU">Europe (EU)</option>
+                            <option value="AP">Asia Pacific (AP)</option>
+                            <option value="Global">Global / Worldwide</option>
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="platform" class="block text-sm font-medium text-black mb-1">Preferred
+                            Platform</label>
+                        <select id="platform" name="platform" required
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 bg-white text-black">
+                            <option value="Instagram" selected>Instagram</option>
+                            <option value="TikTok">TikTok</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="All">Any Platform</option>
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="customerSegment" class="block text-sm font-medium text-black mb-1">Customer Segment
+                            (e.g., Luxury, Budget, Eco-Conscious)</label>
+                        <input type="text" id="customerSegment" name="customerSegment" required
+                            value="Affluent/Premium Skincare Buyers"
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 text-black">
+                    </div>
+
+
+                    <div>
+                        <label for="description" class="block text-sm font-medium text-black mb-1">Brand
+                            Description/Goals (Optional but helpful)</label>
+                        <textarea id="description" name="description" rows="3"
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 text-black"
+                            placeholder="e.g., We sell high-end, vegan skincare products and prioritize clean, minimalist aesthetics."></textarea>
+                    </div>
+
+
+                    <!-- Budget (Existing input moved down) -->
+
+                    <div>
+                        <label for="budget" class="block text-sm font-medium text-black mb-1">Campaign Budget (Max Cost
+                            per Post)</label>
+                        <input type="number" id="budget" name="budget" required min="100" max="100000" value="5000"
+                            class="mt-1 block w-full rounded-lg border-2 border-border-dark shadow-sm focus:ring-black focus:border-black p-3 text-black">
+                        <p class="mt-2 text-xs text-subtle-text">e.g., Max $5000 per collaboration.</p>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-3 px-6 rounded-xl shadow-lg text-lg font-semibold btn-primary-black focus:outline-none focus:ring-3 focus:ring-black focus:ring-opacity-50 transition duration-200 ease-in-out mt-8">
+                        <i class="fas fa-search mr-2"></i> Find Influencer Matches
+                    </button>
+                </form>
             </div>
-            <div class="response-card">
-                <h1 class="heading">TONE LINK.</h1>
+
+
+            <div class="lg:col-span-2">
+                <div class="content-block p-8 rounded-2xl">
+                    <h2 class="text-3xl font-extrabold text-black mb-6 border-b-2 border-border-dark pb-4">Top 20
+                        Matches</h2>
+                    <div id="results-container" class="influencer-list space-y-5 max-h-[80vh] overflow-y-auto pr-3">
+
+                        <div id="initial-message" class="text-center py-16 text-subtle-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-16 w-16 text-black mb-4"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l-2 5L9 9l11 4-5 2zm0 0l-2 5L9 9l11 4-5 2zM9 12a3 3 0 11-6 0 3 3 0 016 0zM17.5 7.5a.5.5 0 11-1 0 .5.5 0 011 0zM19 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <p class="mt-4 text-lg text-black">Enter your brand criteria on the left to generate the top
+                                matches.</p>
+                            <p class="text-sm text-subtle-text">The list below focuses purely on matching metrics.</p>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- REMOVED MODAL HTML AND RELATED SCRIPTS -->
+
     <script src="script.js"></script>
+
+
 </body>
 
 </html>
