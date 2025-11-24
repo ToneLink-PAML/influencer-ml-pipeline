@@ -1,104 +1,94 @@
+/* --- THEME COLORS --- */
+:root {
+    --color-primary-red: #002169;
+    /* Vibrant Red from the image */
+    --color-text-black: #000000;
+    --color-text-white: #FFFFFF;
+    --color-content-bg: #FFFFFF;
+    /* White for content blocks */
+    --color-border-dark: #000000;
+    /* Black for borders */
+    --color-subtle-text: #333333;
+    /* Slightly lighter black for subtext */
+}
+
 body {
-    font-family: monospace;
-    background-color: #FFF8F0;
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    /* Clean, bold sans-serif */
+    background-color: var(--color-primary-red);
+    color: var(--color-text-black);
+    /* Default text for dark background elements */
 }
 
-.container {
-    width: 100%;
-    max-width: 900px;
-    padding: 24px;
-    box-sizing: border-box;
+/* Styling for the main content blocks (Form and Results) */
+.content-block {
+    background-color: var(--color-content-bg);
+    color: var(--color-text-black);
+    border: 2px solid var(--color-border-dark);
+    /* Stronger border */
+    box-shadow: 6px 6px 0px 0px var(--color-border-dark);
+    /* Bold shadow */
 }
 
-.heading {
-    font-size: x-large;
-    margin-top: 5px;
-    margin-bottom: 10px;
+/* Primary Button Style (Black) */
+.btn-primary-black {
+    background-color: var(--color-text-black);
+    color: var(--color-text-white);
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+    border: 2px solid var(--color-text-black);
 }
 
-.forms {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.form-card,
-.response-card {
-    background-color: #FFFCF9;
-    border-radius: 6px;
-    padding: 16px;
-    box-shadow: 1.5px 1.5px 0px #FF69B4;
-    min-width: 260px;
-    flex: 1 1 320px;
-    border-color: #ffb6d3;
-    border-width: 1px;
-    border-style: solid;
-    /* flexible width, stays readable */
-    box-sizing: border-box;
-}
-
-.spacer {
-    margin: 20px;
-}
-
-input,
-textarea {
-    display: block;
-    margin-bottom: 16px;
-    margin-top: 4px;
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid #c3c3c3;
-    resize: vertical;
-}
-
-label {
-    padding: 8px 4px;
-    font-family: "Jersey 10", sans-serif;
-    /* font-size: 0.85em; */
-    font-weight: 100;
-    color: #FF69B4;
-    letter-spacing: 1px;
-}
-
-.selects {
-    display: flex;
-    margin-bottom: 8px;
-    width: 100%;
-    justify-content: space-between;
-}
-
-select {
-    padding: 8px 8px;
-    border: 1px solid #c3c3c3;
-    border-radius: 4px;
-    border: 1px solid #c3c3c3;
-}
-
-button {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 100;
-    font-size: large;
-    letter-spacing: 2px;
-    background: linear-gradient(90deg, #FFE58F 0%, #FFB4B4 100%);
-    border-radius: 4px;
-    border-style: none;
-    padding: 12px;
-    box-sizing: border-box;
-    width: 100%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-
-}
-
-button:hover {
+.btn-primary-black:hover {
+    background-color: #333333;
+    /* Slightly lighter black on hover */
     transform: translateY(-2px);
+    /* Slight lift */
+    box-shadow: 4px 4px 0px 0px var(--color-border-dark);
 }
+
+/* Custom scrollbar for aesthetic */
+.influencer-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.influencer-list::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-black);
+    border-radius: 5px;
+}
+
+.influencer-list::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+/* Input styling adjustments for the new theme */
+input:focus,
+select:focus,
+textarea:focus {
+    --tw-ring-color: var(--color-text-black);
+    border-color: var(--color-text-black);
+    box-shadow: 3px 3px 0px 0px var(--color-border-dark);
+}
+
+/* Adjusting header text color for the red background */
+header h1,
+header p {
+    color: var(--color-text-white);
+}
+
+header h1 span {
+    color: var(--color-text-black);
+    /* Accent on the icon */
+}
+
+/* Utility for the rank in the simplified list */
+.match-rank-prefix {
+    font-size: 0.8rem;
+    /* Small text */
+    font-weight: 900;
+    color: var(--color-primary-red);
+    margin-right: 0.5rem;
+    width: 20px;
+    /* Fixed width for alignment */
+    display: inline-block;
+}
+
