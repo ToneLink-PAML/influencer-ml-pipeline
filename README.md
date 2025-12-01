@@ -7,6 +7,18 @@ Python ML pipeline integrating multiple influencer analytics models to generate 
 - Frontend: static site in `frontend/` (HTML + JS) that talks to the API.
 - Models & pipeline: code under `pipeline/` produces embeddings and score predictions.
 
+## UI Preview
+
+Below are example screenshots of the frontend interface.
+
+![Influencer Dashboard](frontend/assets/u0.jpeg)
+
+![Recommendation Results](frontend/assets/u1.jpeg)
+<!-- <p float="left">
+  <img src="frontend/assets/u0.jpeg" width="45%">
+  <img src="frontend/assets/u1.jpeg" width="45%">
+</p> -->
+
 **Contents of this README**
 - Prerequisites
 - Install dependencies
